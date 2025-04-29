@@ -1,9 +1,14 @@
-# Sanity Clean Content Studio
+# Portfolio Studio
 
-Congratulations, you have now installed the Sanity Content Studio, an open-source real-time content editing environment connected to the Sanity backend.
+[![Sanity](https://img.shields.io/badge/Sanity-io-orange?logo=Ssanity)](https://www.sanity.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.1.6-blue)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19.1.0-blue)](https://reactjs.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Now you can do the following things:
+This is the Sanity Content Studio for my portfolio website.
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+[Sanity Studio](https://www.sanity.io/studio) is an open-source real-time content editing environment connected to the [Sanity](https://www.sanity.io) backend.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
