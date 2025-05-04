@@ -26,7 +26,13 @@ export const pageType = defineType({
       name: 'showInMenu',
       title: 'Show in Menu',
       type: 'boolean',
-      initialValue: true,
+      initialValue: false,
+    }),
+    defineField({
+      name: 'showInFooter',
+      title: 'Show in Footer',
+      type: 'boolean',
+      initialValue: false,
     }),
     defineField({
       name: 'orderRank',
