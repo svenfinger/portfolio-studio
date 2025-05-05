@@ -8,15 +8,16 @@ if (!process.env.SANITY_STUDIO_PROJECT_ID) {
   throw new Error('Missing SANITY_STUDIO_PROJECT_ID')
 }
 
+if (!process.env.SANITY_STUDIO_DATASET) {
+  throw new Error('Missing SANITY_STUDIO_DATASET')
+}
+
 export default defineConfig({
-  name: 'default',
+  name: 'portfolio-studio',
   title: 'Portfolio Studio',
-
   projectId: process.env.SANITY_STUDIO_PROJECT_ID,
-  dataset: 'production',
-
+  dataset: process.env.SANITY_STUDIO_DATASET,
   plugins: [structureTool({structure}), visionTool()],
-
   schema: {
     types: schemaTypes,
   },
