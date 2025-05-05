@@ -1,5 +1,5 @@
-import {StructureBuilder} from 'sanity/structure'
-import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
+import { StructureBuilder } from 'sanity/structure';
+import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list';
 
 export const structure = (S: StructureBuilder, context: any) =>
   S.list()
@@ -12,4 +12,4 @@ export const structure = (S: StructureBuilder, context: any) =>
         context,
       }),
       S.documentTypeListItem('work').title('Work'),
-    ])
+    ]);

@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export const workType = defineType({
   name: 'work',
@@ -13,7 +13,7 @@ export const workType = defineType({
     defineField({
       name: 'slug',
       type: 'slug',
-      options: {source: 'title'},
+      options: { source: 'title' },
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -29,7 +29,7 @@ export const workType = defineType({
     defineField({
       name: 'body',
       type: 'array',
-      of: [{type: 'block'}, {type: 'twoColumn'}],
+      of: [{ type: 'block' }, { type: 'twoColumn' }],
     }),
   ],
-})
+});

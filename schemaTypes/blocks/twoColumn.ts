@@ -1,4 +1,4 @@
-import {defineType} from 'sanity'
+import { defineType } from 'sanity';
 
 export default defineType({
   name: 'twoColumn',
@@ -9,13 +9,13 @@ export default defineType({
       name: 'left',
       title: 'Left Column',
       type: 'array',
-      of: [{type: 'body'}],
+      of: [{ type: 'body' }],
     },
     {
       name: 'right',
       title: 'Right Column',
       type: 'array',
-      of: [{type: 'body'}],
+      of: [{ type: 'body' }],
     },
   ],
-})
+});
