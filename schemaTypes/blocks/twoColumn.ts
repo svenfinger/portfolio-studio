@@ -1,21 +1,36 @@
-import { defineType } from 'sanity';
+import { defineField, defineType } from 'sanity';
+import { InlineIcon } from '@sanity/icons';
 
 export default defineType({
   name: 'twoColumn',
   type: 'object',
-  title: 'Two Column Block',
+  title: 'Two Columns',
+  icon: InlineIcon,
   fields: [
+    defineField({
+      name: 'showDivider',
+      title: 'Show Divider',
+      type: 'boolean',
+      initialValue: false,
+    }),
     {
       name: 'left',
-      title: 'Left Column',
+      title: 'Left',
       type: 'array',
       of: [{ type: 'body' }],
     },
     {
       name: 'right',
-      title: 'Right Column',
+      title: 'Right',
       type: 'array',
       of: [{ type: 'body' }],
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Two Columns',
+      };
+    },
+  },
 });

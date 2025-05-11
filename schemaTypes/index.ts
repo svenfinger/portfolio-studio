@@ -1,6 +1,8 @@
+import { configuration } from './configuration';
 import { pageType } from './pageType';
 import { workType } from './workType';
 import twoColumn from './blocks/twoColumn';
+import imageGrid from './blocks/imageGrid';
 import body from './blocks/body';
 
-export const schemaTypes = [pageType, workType, twoColumn, body];
+export const schemaTypes = [configuration, pageType, workType, twoColumn, imageGrid, body];

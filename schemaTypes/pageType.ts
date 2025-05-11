@@ -42,7 +42,7 @@ export const pageType = defineType({
     defineField({
       name: 'body',
       type: 'array',
-      of: [{ type: 'block' }, { type: 'twoColumn' }],
+      of: [{ type: 'block' }, { type: 'twoColumn' }, { type: 'imageGrid' }],
     }),
   ],
 });

@@ -17,6 +17,9 @@ export default defineConfig({
   title: 'Portfolio Studio',
   projectId: process.env.SANITY_STUDIO_PROJECT_ID,
   dataset: process.env.SANITY_STUDIO_DATASET,
+  mediaLibrary: {
+    enabled: true,
+  },
   plugins: [structureTool({ structure }), visionTool()],
   schema: {
     types: schemaTypes,
