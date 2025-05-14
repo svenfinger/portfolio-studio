@@ -10,6 +10,10 @@ export const configuration = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'subline',
+      type: 'string',
+    }),
+    defineField({
       name: 'ogImage',
       type: 'image',
       title: 'Default Social Share Image',
