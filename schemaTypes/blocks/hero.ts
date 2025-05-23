@@ -1,5 +1,5 @@
 import { defineType } from 'sanity';
-import {SparkleIcon} from '@sanity/icons'
+import { SparkleIcon } from '@sanity/icons';
 
 export default defineType({
   name: 'hero',

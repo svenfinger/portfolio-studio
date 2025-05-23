@@ -11,6 +11,10 @@ export const workType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'subline',
+      type: 'string',
+    }),
+    defineField({
       name: 'slug',
       type: 'slug',
       options: { source: 'title' },
@@ -25,6 +29,26 @@ export const workType = defineType({
     defineField({
       name: 'image',
       type: 'image',
+    }),
+    defineField({
+      name: 'industry',
+      type: 'string',
+    }),
+    defineField({
+      name: 'company_size',
+      type: 'string',
+    }),
+    defineField({
+      name: 'project_team',
+      type: 'text',
+    }),
+    defineField({
+      name: 'role',
+      type: 'text',
+    }),
+    defineField({
+      name: 'process',
+      type: 'text',
     }),
     defineField({
       name: 'body',

@@ -19,9 +19,6 @@ export default defineType({
               name: 'alt',
               type: 'string',
               title: 'Alt text',
-              options: {
-                isHighlighted: true,
-              },
             },
           ],
         },
