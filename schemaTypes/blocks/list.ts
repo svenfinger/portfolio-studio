@@ -21,7 +21,7 @@ export default defineType({
               name: 'label',
               title: 'Label',
               type: 'string',
-              validation: Rule => Rule.required(),
+              validation: (Rule) => Rule.required(),
             }),
             defineField({
               name: 'valueType',
@@ -56,7 +56,7 @@ export default defineType({
                 defineField({
                   name: 'url',
                   title: 'URL',
-                  type: "string"
+                  type: 'string',
                 }),
                 defineField({
                   name: 'openInNewTab',
@@ -82,7 +82,7 @@ export default defineType({
               } else if (valueType === 'link') {
                 subtitle = `${linkText || linkUrl || '(No link)'} ↗`;
               }
-              
+
               return {
                 title: label || '(No label)',
                 subtitle,

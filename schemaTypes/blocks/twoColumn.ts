@@ -17,19 +17,34 @@ export default defineType({
       name: 'left',
       title: 'Left',
       type: 'array',
-      of: [{ type: 'body' }, { type: 'list' }],
+      of: [{ type: 'body' }, { type: 'list' }, { type: 'experienceList' }],
     },
     {
       name: 'right',
       title: 'Right',
       type: 'array',
-      of: [{ type: 'body' }, { type: 'list' }],
+      of: [{ type: 'body' }, { type: 'list' }, { type: 'experienceList' }],
     },
   ],
   preview: {
-    prepare() {
+    select: {
+      left: 'left',
+      right: 'right',
+      showDivider: 'showDivider',
+    },
+    prepare({ left = [], right = [], showDivider = false }) {
+      const leftCount = Array.isArray(left) ? left.length : 0;
+      const rightCount = Array.isArray(right) ? right.length : 0;
+
+      const subtitle = [
+        `Left: ${leftCount} item${leftCount !== 1 ? 's' : ''}`,
+        `Right: ${rightCount} item${rightCount !== 1 ? 's' : ''}`,
+        showDivider ? 'With divider' : 'No divider',
+      ].join(' • ');
+
       return {
         title: 'Two Columns',
+        subtitle,
       };
     },
   },
