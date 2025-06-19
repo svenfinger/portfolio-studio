@@ -40,7 +40,8 @@ export const workType = defineType({
     }),
     defineField({
       name: 'project_team',
-      type: 'text',
+      type: 'array',
+      of: [{ type: 'block' }],
     }),
     defineField({
       name: 'role',
