@@ -7,6 +7,8 @@ import body from './blocks/body';
 import hero from './blocks/hero';
 import list from './blocks/list';
 import experienceList from './blocks/experienceList';
+import workMedia from './blocks/workMedia';
+import workMediaGrid from './blocks/workMediaGrid';
 
 export const schemaTypes = [
   configuration,
@@ -18,4 +20,6 @@ export const schemaTypes = [
   hero,
   list,
   experienceList,
+  workMedia,
+  workMediaGrid,
 ];

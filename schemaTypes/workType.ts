@@ -54,7 +54,7 @@ export const workType = defineType({
     defineField({
       name: 'body',
       type: 'array',
-      of: [{ type: 'block' }, { type: 'twoColumn' }],
+      of: [{ type: 'block' }, { type: 'workMedia' }, { type: 'workMediaGrid' }],
     }),
   ],
 });
