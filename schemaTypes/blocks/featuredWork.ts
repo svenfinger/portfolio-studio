@@ -2,9 +2,9 @@ import { defineField, defineType } from 'sanity';
 import { SparkleIcon } from '@sanity/icons';
 
 export default defineType({
-  name: 'hero',
+  name: 'featuredWork',
   type: 'object',
-  title: 'Hero',
+  title: 'Featured Work',
   icon: SparkleIcon,
   fields: [
     defineField({
@@ -12,18 +12,15 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'subtitle',
-      type: 'string',
-    }),
-    defineField({
-      name: 'image',
-      type: 'image',
-    }),
-    defineField({
-      name: 'video',
-      type: 'file',
-      title: 'Video',
-      options: { accept: 'video/*' },
+      name: 'works',
+      type: 'array',
+      title: 'Select Works',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'work' }],
+        },
+      ],
     }),
   ],
 });

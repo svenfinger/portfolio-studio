@@ -9,6 +9,7 @@ import list from './blocks/list';
 import experienceList from './blocks/experienceList';
 import workMedia from './blocks/workMedia';
 import workMediaGrid from './blocks/workMediaGrid';
+import featuredWork from './blocks/featuredWork';
 
 export const schemaTypes = [
   configuration,
@@ -22,4 +23,5 @@ export const schemaTypes = [
   experienceList,
   workMedia,
   workMediaGrid,
+  featuredWork,
 ];

@@ -10,7 +10,7 @@ export const configuration = defineType({
       type: 'string',
     }),
     defineField({
-      name: 'subline',
+      name: 'description',
       type: 'string',
     }),
     defineField({
