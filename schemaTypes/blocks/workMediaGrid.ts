@@ -1,11 +1,11 @@
 import { defineType } from 'sanity';
-import { ProjectsIcon } from '@sanity/icons';
+import { ImageIcon } from '@sanity/icons';
 
 export default defineType({
   name: 'workMediaGrid',
   type: 'object',
   title: 'Work Media Grid',
-  icon: ProjectsIcon,
+  icon: ImageIcon,
   fields: [
     {
       name: 'mediaItems',
@@ -42,19 +42,14 @@ export default defineType({
   ],
   preview: {
     select: {
-      mediaItems: 'mediaItems',
       text: 'text',
-      columns: 'columns',
-      layout: 'layout',
+      mediaItems: 'mediaItems',
     },
-    prepare({ mediaItems = [], text = [], columns }) {
-      const mediaCount = Array.isArray(mediaItems) ? mediaItems.length : 0;
-      const textLength = Array.isArray(text) ? text.length : 0;
-
+    prepare({ text, mediaItems }) {
       return {
         title: 'Work Media Grid',
-        subtitle: `${mediaCount} item${mediaCount !== 1 ? 's' : ''} • ${columns} columns • ${textLength} text block${textLength !== 1 ? 's' : ''}`,
-        media: mediaItems?.[0],
+        subtitle: text,
+        media: mediaItems?.[0] || ImageIcon,
       };
     },
   },

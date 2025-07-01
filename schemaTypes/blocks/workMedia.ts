@@ -1,4 +1,4 @@
-import { defineType } from 'sanity';
+import { defineField, defineType } from 'sanity';
 import { ImageIcon } from '@sanity/icons';
 
 export default defineType({
@@ -10,33 +10,27 @@ export default defineType({
     {
       name: 'image',
       type: 'image',
-      title: 'Image',
-      fields: [{ name: 'alt', type: 'string', title: 'Alt text' }],
     },
     {
       name: 'video',
       type: 'file',
-      title: 'Video',
       options: { accept: 'video/*' },
     },
-    {
+    defineField({
       name: 'text',
-      title: 'Text',
       type: 'text',
-    },
+    }),
   ],
   preview: {
     select: {
-      media: 'media',
       text: 'text',
+      image: 'image',
     },
-    prepare({ media, text = [] }) {
-      const textLength = Array.isArray(text) ? text.length : 0;
-
+    prepare({ text, image }) {
       return {
         title: 'Work Media',
-        subtitle: `${textLength} text block${textLength !== 1 ? 's' : ''}`,
-        media: media,
+        subtitle: text,
+        media: image || ImageIcon,
       };
     },
   },
