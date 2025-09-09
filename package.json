@@ -17,14 +17,14 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/cli": "^3.99.0",
+    "@sanity/cli": "^4.7.0",
     "@sanity/orderable-document-list": "^1.4.0",
-    "@sanity/ui": "^2.16.14",
-    "@sanity/vision": "^3.99.0",
+    "@sanity/ui": "^3.0.14",
+    "@sanity/vision": "^4.7.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "sanity": "^3.99.0",
-    "sanity-plugin-media": "^3.0.5",
+    "sanity": "^4.7.0",
+    "sanity-plugin-media": "^4.0.0",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
