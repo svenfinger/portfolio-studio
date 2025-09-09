@@ -13,18 +13,18 @@ export default defineType({
       type: 'boolean',
       initialValue: false,
     }),
-    {
+    defineField({
       name: 'left',
       title: 'Left',
       type: 'array',
       of: [{ type: 'body' }, { type: 'list' }, { type: 'experienceList' }],
-    },
-    {
+    }),
+    defineField({
       name: 'right',
       title: 'Right',
       type: 'array',
       of: [{ type: 'body' }, { type: 'list' }, { type: 'experienceList' }],
-    },
+    }),
   ],
   preview: {
     select: {

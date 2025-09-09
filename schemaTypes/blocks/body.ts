@@ -1,4 +1,4 @@
-import { defineType } from 'sanity';
+import { defineField, defineType } from 'sanity';
 import { BlockContentIcon } from '@sanity/icons';
 
 export default defineType({
@@ -7,7 +7,7 @@ export default defineType({
   title: 'Body',
   icon: BlockContentIcon,
   fields: [
-    {
+    defineField({
       name: 'body',
       title: 'Text',
       type: 'array',
@@ -16,6 +16,6 @@ export default defineType({
           type: 'block',
         },
       ],
-    },
+    }),
   ],
 });

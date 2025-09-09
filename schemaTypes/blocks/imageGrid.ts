@@ -1,4 +1,4 @@
-import { defineType } from 'sanity';
+import { defineField, defineType } from 'sanity';
 import { ProjectsIcon } from '@sanity/icons';
 
 export default defineType({
@@ -7,7 +7,7 @@ export default defineType({
   type: 'object',
   icon: ProjectsIcon,
   fields: [
-    {
+    defineField({
       name: 'images',
       title: 'Images',
       type: 'array',
@@ -15,18 +15,18 @@ export default defineType({
         {
           type: 'image',
           fields: [
-            {
+            defineField({
               name: 'alt',
               type: 'string',
               title: 'Alt text',
-            },
+            }),
           ],
         },
       ],
       options: {
         layout: 'grid',
       },
-    },
+    }),
   ],
   preview: {
     select: {

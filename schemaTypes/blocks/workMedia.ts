@@ -7,15 +7,15 @@ export default defineType({
   title: 'Work Media',
   icon: ImageIcon,
   fields: [
-    {
+    defineField({
       name: 'image',
       type: 'image',
-    },
-    {
+    }),
+    defineField({
       name: 'video',
       type: 'file',
       options: { accept: 'video/*' },
-    },
+    }),
     defineField({
       name: 'text',
       type: 'text',

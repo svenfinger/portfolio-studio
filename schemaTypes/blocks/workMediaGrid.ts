@@ -1,4 +1,4 @@
-import { defineType } from 'sanity';
+import { defineField, defineType } from 'sanity';
 import { ImageIcon } from '@sanity/icons';
 
 export default defineType({
@@ -7,7 +7,7 @@ export default defineType({
   title: 'Work Media Grid',
   icon: ImageIcon,
   fields: [
-    {
+    defineField({
       name: 'mediaItems',
       title: 'Media Items',
       type: 'array',
@@ -15,11 +15,11 @@ export default defineType({
         {
           type: 'image',
           fields: [
-            {
+            defineField({
               name: 'alt',
               type: 'string',
               title: 'Alt text',
-            },
+            }),
           ],
         },
         {
@@ -33,12 +33,12 @@ export default defineType({
       options: {
         layout: 'grid',
       },
-    },
-    {
+    }),
+    defineField({
       name: 'text',
       title: 'Text',
       type: 'text',
-    },
+    }),
   ],
   preview: {
     select: {
