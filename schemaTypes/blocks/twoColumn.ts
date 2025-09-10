@@ -33,18 +33,49 @@ export default defineType({
       showDivider: 'showDivider',
     },
     prepare({ left = [], right = [], showDivider = false }) {
-      const leftCount = Array.isArray(left) ? left.length : 0;
-      const rightCount = Array.isArray(right) ? right.length : 0;
+      const getContentTypes = (content: any[]): string => {
+        if (!Array.isArray(content) || content.length === 0) {
+          return '';
+        }
 
-      const subtitle = [
-        `Left: ${leftCount} item${leftCount !== 1 ? 's' : ''}`,
-        `Right: ${rightCount} item${rightCount !== 1 ? 's' : ''}`,
-        showDivider ? 'With divider' : 'No divider',
-      ].join(' • ');
+        const types = [...new Set(content.map(item => item._type))];
+        
+        const typeNames = types.map(type => {
+          switch (type) {
+            case 'body':
+              return 'Text';
+            case 'list':
+              return 'List';
+            case 'experienceList':
+              return 'Experience List';
+            default:
+              return type;
+          }
+        });
+
+        return typeNames.join(', ');
+      };
+
+      const leftTypes = getContentTypes(left);
+      const rightTypes = getContentTypes(right);
+
+      const subtitleParts = [];
+      
+      if (leftTypes) {
+        subtitleParts.push(`Left: ${leftTypes}`);
+      }
+      
+      if (rightTypes) {
+        subtitleParts.push(`Right: ${rightTypes}`);
+      }
+      
+      if (showDivider) {
+        subtitleParts.push('Divider');
+      }
 
       return {
         title: 'Two Columns',
-        subtitle,
+        subtitle: subtitleParts.join(' • '),
       };
     },
   },
