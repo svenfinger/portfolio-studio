@@ -38,9 +38,9 @@ export default defineType({
           return '';
         }
 
-        const types = [...new Set(content.map(item => item._type))];
-        
-        const typeNames = types.map(type => {
+        const types = [...new Set(content.map((item) => item._type))];
+
+        const typeNames = types.map((type) => {
           switch (type) {
             case 'body':
               return 'Text';
@@ -60,15 +60,15 @@ export default defineType({
       const rightTypes = getContentTypes(right);
 
       const subtitleParts = [];
-      
+
       if (leftTypes) {
         subtitleParts.push(`Left: ${leftTypes}`);
       }
-      
+
       if (rightTypes) {
         subtitleParts.push(`Right: ${rightTypes}`);
       }
-      
+
       if (showDivider) {
         subtitleParts.push('Divider');
       }
