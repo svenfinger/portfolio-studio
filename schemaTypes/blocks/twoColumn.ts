@@ -17,13 +17,21 @@ export default defineType({
       name: 'left',
       title: 'Left',
       type: 'array',
-      of: [{ type: 'body' }, { type: 'list' }, { type: 'experienceList' }],
+      of: [
+        { type: 'block' },
+        { type: 'list' }, 
+        { type: 'experienceList' }
+      ],
     }),
     defineField({
       name: 'right',
       title: 'Right',
       type: 'array',
-      of: [{ type: 'body' }, { type: 'list' }, { type: 'experienceList' }],
+      of: [
+        { type: 'block' },
+        { type: 'list' }, 
+        { type: 'experienceList' }
+      ],
     }),
   ],
   preview: {
@@ -42,7 +50,7 @@ export default defineType({
 
         const typeNames = types.map((type) => {
           switch (type) {
-            case 'body':
+            case 'block':
               return 'Text';
             case 'list':
               return 'List';
