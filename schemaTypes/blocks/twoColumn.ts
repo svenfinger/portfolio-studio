@@ -17,21 +17,13 @@ export default defineType({
       name: 'left',
       title: 'Left',
       type: 'array',
-      of: [
-        { type: 'block' },
-        { type: 'list' }, 
-        { type: 'experienceList' }
-      ],
+      of: [{ type: 'block' }, { type: 'list' }, { type: 'experienceList' }],
     }),
     defineField({
       name: 'right',
       title: 'Right',
       type: 'array',
-      of: [
-        { type: 'block' },
-        { type: 'list' }, 
-        { type: 'experienceList' }
-      ],
+      of: [{ type: 'block' }, { type: 'list' }, { type: 'experienceList' }],
     }),
   ],
   preview: {
