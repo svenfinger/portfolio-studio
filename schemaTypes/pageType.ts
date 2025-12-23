@@ -35,6 +35,19 @@ export const pageType = defineType({
       initialValue: false,
     }),
     defineField({
+      name: 'layout',
+      title: 'Page Layout',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Default', value: 'default' },
+          { title: 'Narrow', value: 'narrow' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'default',
+    }),
+    defineField({
       name: 'orderRank',
       type: 'string',
       hidden: true,
