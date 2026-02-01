@@ -18,13 +18,13 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/cli": "^4.20.3",
+    "@sanity/cli": "^5.7.0",
     "@sanity/orderable-document-list": "^1.4.0",
     "@sanity/ui": "^3.1.11",
-    "@sanity/vision": "^4.20.3",
+    "@sanity/vision": "^5.7.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
-    "sanity": "^4.20.3",
+    "sanity": "^5.7.0",
     "sanity-plugin-media": "^4.1.0",
     "styled-components": "^6.1.19"
   },
@@ -43,6 +43,7 @@
   },
   "overrides": {
     "glob": ">=11.0.0",
-    "prismjs": ">=1.30.0"
+    "prismjs": ">=1.30.0",
+    "undici": ">=6.23.0"
   }
 }

@@ -9,4 +9,5 @@ export default defineCliConfig({
     appId: process.env.SANITY_STUDIO_APP_ID,
   },
   studioHost: process.env.SANITY_STUDIO_HOSTNAME,
+  reactStrictMode: true,
 });
